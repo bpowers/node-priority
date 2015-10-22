@@ -14,21 +14,12 @@ can be used, for example, to implement the UNIX
 
 ```javascript
 var priority = require('node-priority');
-var getpriority = priority.get;
-var setpriority = priority.set;
 
-setpriority(priority.Process, 0, 10, function(err) {
+priority.set(priority.Process, 0, 10, function(err) {
     if (err)
         throw err;
-    getpriority(priority.Process, 0, function(err, prio) {
+    priority.get(priority.Process, 0, function(err, prio) {
         console.log('successfully set priority to ' + prio);
     });
-});
-
-setpriority(function(err, rfd, wfd) {
-    if (err) {
-        console.log('pipe failed, maybe out of FDs? ' + err);
-        return;
-    }
 });
 ```
