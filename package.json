@@ -1,6 +1,6 @@
 {
     "name": "node-priority",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "exposes the getpriority and setpriority system calls for adjusting priority",
     "homepage": "https://github.com/bpowers/node-priority",
     "keywords": [

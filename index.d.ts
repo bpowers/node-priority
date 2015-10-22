@@ -6,5 +6,5 @@ export var Process: number;
 export var Pgrp: number;
 export var User: number;
 
-export function getpriority(which: number, who: number, cb: (err: any, prio: number) => void): void;
-export function setpriority(which: number, who: number, prio: number, cb: (err: any) => void): void;
+export function get(which: number, who: number, cb: (err: any, prio: number) => void): void;
+export function set(which: number, who: number, prio: number, cb: (err: any) => void): void;
