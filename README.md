@@ -30,6 +30,5 @@ setpriority(function(err, rfd, wfd) {
         console.log('pipe failed, maybe out of FDs? ' + err);
         return;
     }
-    // use rfd and wfd
 });
 ```
