@@ -96,12 +96,9 @@ NAN_MODULE_INIT(Init) {
 		 Nan::GetFunction(Nan::New<FunctionTemplate>(Set)).ToLocalChecked());
 
 	// constants
-	Nan::Set(target, Nan::New("Process").ToLocalChecked(),
-		 v8::Integer::New(v8::Isolate::GetCurrent(), (int)PRIO_PROCESS));
-	Nan::Set(target, Nan::New("Pgrp").ToLocalChecked(),
-		 v8::Integer::New(v8::Isolate::GetCurrent(), (int)PRIO_PGRP));
-	Nan::Set(target, Nan::New("User").ToLocalChecked(),
-		 v8::Integer::New(v8::Isolate::GetCurrent(), (int)PRIO_USER));
+	Nan::Set(target, Nan::New("Process").ToLocalChecked(), Nan::New((int)PRIO_PROCESS));
+	Nan::Set(target, Nan::New("Pgrp").ToLocalChecked(), Nan::New((int)PRIO_PGRP));
+	Nan::Set(target, Nan::New("User").ToLocalChecked(), Nan::New((int)PRIO_USER));
 }
 
 NODE_MODULE(priority, Init)
